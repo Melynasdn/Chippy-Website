@@ -1,0 +1,339 @@
+/* Fix pour l'overflow horizontal global */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Fix pour tous les conteneurs */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+.menu-page {
+  min-height: 100vh;
+  padding: 1rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden; 
+  width: 100%; 
+}
+
+.menu-page.light {
+  background: linear-gradient(135deg, #FFFFFF 0%, #f8f9fa 100%);
+}
+
+.menu-page.dark {
+  background: #060921;
+  background: linear-gradient(104deg, rgba(6, 9, 33, 1) 0%, rgba(38, 46, 83, 1) 73%, rgba(1, 31, 77, 1) 100%);
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%; /* Ajouté */
+  box-sizing: border-box; /* Ajouté */
+}
+
+/* Menu Title */
+.menu-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+  position: relative;
+  padding-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.menu-title.light {
+  color: #262E53;
+}
+
+.menu-title.dark {
+  color: #FFFFFF;
+}
+
+.menu-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #C22409 0%, #9E1C0F 100%);
+  border-radius: 2px;
+}
+
+/* Section Styles */
+.menu-section {
+  margin-bottom: 4rem;
+  width: 100%; /* Ajouté */
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 5px solid #C22409;
+  transition: color 0.3s ease;
+}
+
+.section-title.light {
+  color: #10446C;
+}
+
+.section-title.dark {
+  color: #FFFFFF;
+}
+
+/* Pizza Grid */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+  width: 100%; /* Ajouté */
+}
+
+/* Extras Grid */
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+  width: 100%; /* Ajouté */
+}
+
+/* Extra Card */
+.extra-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box; /* Ajouté */
+}
+
+.extra-card.light {
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(38, 46, 83, 0.1);
+}
+
+.extra-card.dark {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.extra-card.light:hover {
+  border-color: #C22409;
+  box-shadow: 0 8px 20px rgba(194, 36, 9, 0.15);
+  transform: translateY(-4px);
+}
+
+.extra-card.dark:hover {
+  border-color: #C22409;
+  box-shadow: 0 8px 20px rgba(194, 36, 9, 0.3);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Drink Card */
+.drink-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  width: 100%; /* Modifié de max-width à width */
+  box-sizing: border-box; /* Ajouté */
+}
+
+.drink-card.light {
+  background: linear-gradient(135deg, #FFFFFF 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 8px rgba(38, 46, 83, 0.1);
+}
+
+.drink-card.dark {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.08) 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.drink-card.light:hover {
+  border-color: #20658F;
+  box-shadow: 0 8px 20px rgba(32, 101, 143, 0.15);
+  transform: translateY(-4px);
+}
+
+.drink-card.dark:hover {
+  border-color: #20658F;
+  box-shadow: 0 8px 20px rgba(32, 101, 143, 0.3);
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
+}
+
+.drink-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Style pour les images dans drink-icon */
+.drink-icon img {
+  width: 80px; /* Ajouté */
+  height: 80px; /* Ajouté */
+  object-fit: contain; /* Ajouté */
+}
+
+/* Item Name */
+.item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+  word-wrap: break-word; /* Ajouté */
+}
+
+.item-name.light {
+  color: #262E53;
+}
+
+.item-name.dark {
+  color: #FFFFFF;
+}
+
+/* Item Price */
+.item-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.item-price.light {
+  color: #C22409;
+}
+
+.item-price.dark {
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(194, 36, 9, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 1rem;
+  }
+
+  .menu-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .menu-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pizza-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .extras-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .extra-card,
+  .drink-card {
+    padding: 1.25rem;
+  }
+
+  .drink-icon img {
+    width: 60px; /* Réduire sur mobile */
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .menu-container {
+    padding: 0.5rem;
+  }
+
+  .menu-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    padding-left: 0.75rem;
+    border-left-width: 4px;
+  }
+
+  .drink-icon img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Force white text in dark mode for all elements */
+.menu-page.dark * {
+  color: #FFFFFF !important;
+}
+
+.menu-page.dark .item-price {
+  text-shadow: 0 0 10px rgba(194, 36, 9, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.menu-section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.menu-section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.menu-section:nth-child(4) {
+  animation-delay: 0.3s;
+}

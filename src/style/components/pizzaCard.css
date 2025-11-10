@@ -1,0 +1,121 @@
+.pizza-cardd-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pizza-cardd-container.dark {
+  background-color: #5573992c;
+  color: #f9fafb;
+}
+
+.pizza-cardd-container.light {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}
+
+/* ====== Image ====== */
+.pizza-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+/* ====== Détails ====== */
+.pizza-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.pizza-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.pizza-ingredients {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.pizza-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #c62828;
+}
+
+/* ====== Effets hover ====== */
+.pizza-cardd-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .pizza-cardd-container {
+    gap: 1rem; /* Réduire l'espace entre l'image et le texte */
+    padding: 0.75rem 0.5rem;
+  }
+
+  .pizza-img {
+    width: 90px; /* Image plus petite sur mobile */
+    height: 90px;
+  }
+
+  .pizza-name {
+    font-size: 1.25rem; /* Titre légèrement plus petit */
+  }
+
+  .pizza-ingredients {
+    font-size: 0.875rem; /* Texte plus petit */
+    margin-bottom: 0.75rem;
+  }
+
+  .pizza-price {
+    font-size: 1.125rem; /* Prix légèrement plus petit */
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  .pizza-cardd-container {
+    gap: 0.75rem;
+  }
+
+  .pizza-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pizza-name {
+    font-size: 1.125rem;
+  }
+
+  .pizza-ingredients {
+    font-size: 0.8rem;
+  }
+}

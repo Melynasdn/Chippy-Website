@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+import React, { useState } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
+
+
+import Layout from './components/layout/Layout';
+import HomePage from './pages/HomePage.jsx';
+import MenuPage from './pages/MenuPage.jsx';
+import ContactPage from './pages/ContactPages.jsx';
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+          <Layout currentPage={currentPage} onNavigate={setCurrentPage}>
+            {currentPage === 'home' && <HomePage onNavigate={setCurrentPage} />}
+            {currentPage === 'menu' && <MenuPage />}
+            {currentPage === 'contact' && <ContactPage />}
+          </Layout>
+      
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
-
-export default App;

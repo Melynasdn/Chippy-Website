@@ -1,0 +1,27 @@
+
+.layout-container {
+  min-height: 100vh;
+  transition: background-color 0.3s;
+}
+
+.layout-container.dark {
+  background-color: #111827;
+}
+
+.layout-container.light {
+  background-color: #f9fafb;
+}
+
+/* Animation float */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
