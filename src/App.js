@@ -2,6 +2,7 @@
 import './App.css';
 
 import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -16,12 +17,13 @@ export default function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
+        <Router>
           <Layout currentPage={currentPage} onNavigate={setCurrentPage}>
             {currentPage === 'home' && <HomePage onNavigate={setCurrentPage} />}
             {currentPage === 'menu' && <MenuPage />}
             {currentPage === 'contact' && <ContactPage />}
           </Layout>
-      
+      </Router>
       </LanguageProvider>
     </ThemeProvider>
   );

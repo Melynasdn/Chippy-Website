@@ -1,11 +1,26 @@
-body {
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, .titre-principal {
+  font-family: "Lobster", cursive;
+  line-height: 1.6; 
+  font-weight: 400;
 }
+
+body, p, .texte {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.7px; 
+}
+

@@ -22,7 +22,7 @@ const Navigation = ({ currentPage, onNavigate }) => {
         >
           <img
           className="navbar_logo" src={Logo} alt="" />
-           Chippy Pizza
+          <p>Chippy Pizza</p>
         </div>
 
         {/* Liens principaux */}

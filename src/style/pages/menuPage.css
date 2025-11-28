@@ -1,27 +1,10 @@
-/* Fix pour l'overflow horizontal global */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Fix pour tous les conteneurs */
-#root {
-  overflow-x: hidden;
-  width: 100%;
-}
 .menu-page {
   min-height: 100vh;
   padding: 1rem 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden; 
-  width: 100%; 
+  margin-top: 4rem;
 }
 
 .menu-page.light {
@@ -30,7 +13,6 @@ html, body {
 
 .menu-page.dark {
   background: #060921;
-  background: linear-gradient(104deg, rgba(6, 9, 33, 1) 0%, rgba(38, 46, 83, 1) 73%, rgba(1, 31, 77, 1) 100%);
 }
 
 .menu-container {
@@ -99,10 +81,10 @@ html, body {
 /* Pizza Grid */
 .pizza-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 1rem 0;
-  width: 100%; /* Ajouté */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  padding: 1rem ;
+  width: 100%; 
 }
 
 /* Extras Grid */

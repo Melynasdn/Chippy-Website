@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+👇
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🍕 Chippy Pizza — React Restaurant Website
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+A modern and responsive pizza restaurant website built with React, featuring dark/light mode, multilingual support, smooth animations, and a dynamic hero carousel.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⚡ Features
 
-### `npm run build`
+🎨 Modern UI with smooth transitions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🌓 Dark / Light mode (custom hook)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🌍 FR / EN language switch
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🍕 Dynamic pizza highlights & menu navigation
 
-### `npm run eject`
+🖼️ Auto-rotating hero carousel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📍 Embedded Google Maps location
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📱 Fully responsive
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🛠️ Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React 18
 
-## Learn More
+Lucide Icons
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CSS3
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Custom hooks (useTheme, useLanguage)
 
-### Code Splitting
+📂 Project Setup
+git clone https://github.com/yourusername/chippy-pizza.git
+cd chippy-pizza
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Runs on → http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Build for production:
 
-### Making a Progressive Web App
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📁 File Structure (short)
+src/
+ ├─ pages/ HomePage.jsx
+ ├─ hooks/ useTheme.js, useLanguage.js
+ ├─ assets/ images
+ ├─ components/ Navbar, Footer
+ ├─ style/ CSS files
+ └─ App.jsx
 
-### Advanced Configuration
+🧠 Core Logic (very brief)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Hero carousel: rotates images every 5s using useEffect.
 
-### Deployment
+Theme system: useTheme() toggles dark / light classes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Translations: useLanguage() provides t text object.
 
-### `npm run build` fails to minify
+🌍 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deploy easily on:
+
+Vercel → npm run build then drag folder
+
+Netlify → select project, auto-deploy
+
+GitHub Pages → gh-pages package
+
+👩‍💻 Author
+
+Melyna Feriel Soudani
+Software Engineer • Web Developer • AI Enthusiast
