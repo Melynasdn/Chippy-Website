@@ -27,7 +27,7 @@ const Footer = () => {
               {t.findPizzeria}
             </a>
             <a 
-              href="tel:+213555123456"
+              href="tel:+33695134764"
               className="cta-btn cta-btn-secondary"
               style={{ textDecoration: 'none' }}
             >
