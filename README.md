@@ -1,8 +1,3 @@
-<p align="center">
-  <img src="./public/banner.png" alt="Chippy Pizza Banner" width="100%" />
-</p>
-
-
 #  Chippy Pizza — React Restaurant Website
 
 ![Chippy Pizza Preview](./public/site.png)
@@ -11,11 +6,7 @@
 
 ---
 
-## 🎬 Aperçu animé
 
-<p align="center">
-  <img src="./public/demo.gif" alt="Website Animated Preview" width="80%" />
-</p>
 
 
 ## ⚡ Features
@@ -45,7 +36,7 @@ cd chippy-pizza
 npm install
 npm start
 
-
+```
 
 
 
