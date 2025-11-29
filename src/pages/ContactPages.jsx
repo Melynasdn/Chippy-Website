@@ -19,36 +19,35 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatus('');
+  e.preventDefault();
+  setIsSubmitting(true);
+  setStatus('');
 
-    try {
-      // Configuration EmailJS
-      const serviceId = 'service_xatkgah';
-      const templateId = 'template_pty2y3k';
-      const publicKey = '9nJmeVTiebIpKMSHs';
+  try {
+    const serviceId = 'service_xatkgah';
+    const templateId = 'template_pty2y3k';
+    const publicKey = '9nJmeVTiebIpKMSHs';
 
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        to_name: 'Chippy Pizza',
-      };
+    const templateParams = {
+      name: formData.name,           
+      to_name: formData.name,      
+      message: formData.message, 
+      email: formData.email,
+      phone: formData.phone,
+    };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      setStatus(t.successMessage);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error);
-      setStatus('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setStatus(''), 5000);
-    }
-  };
+    await emailjs.send(serviceId, templateId, templateParams, publicKey);
+    
+    setStatus( t.successMessage);
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  } catch (error) {
+    console.error('Erreur lors de l\'envoi:', error);
+    setStatus(' Erreur lors de l\'envoi. Veuillez réessayer.');
+  } finally {
+    setIsSubmitting(false);
+    setTimeout(() => setStatus(''), 5000);
+  }
+};
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
