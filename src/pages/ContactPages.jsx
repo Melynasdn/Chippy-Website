@@ -25,10 +25,9 @@ const ContactPage = () => {
 
     try {
       // Configuration EmailJS
-      // Remplacez ces valeurs par vos propres clés depuis https://www.emailjs.com/
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_xatkgah';
+      const templateId = 'template_pty2y3k';
+      const publicKey = '9nJmeVTiebIpKMSHs';
 
       const templateParams = {
         from_name: formData.name,
