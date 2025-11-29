@@ -201,6 +201,7 @@
   background: linear-gradient(135deg, rgba(46, 107, 181, 0.08) 0%, rgba(36, 107, 179, 0.08) 100%);
   border-color: rgba(95, 183, 255, 0.3);
   box-shadow: 0 8px 32px rgba(13, 39, 118, 0.2);
+  color: #ffffff;
 }
 
 .form-input:focus,
